@@ -5,15 +5,12 @@ import SignUpForm from './components/SignUpForm'
 
 function App() {
 
-  // const [username, setUsername] = useState("");
-  // const [password, setPassword] = useState("");
-  // const [error, setError] = useState(null);
-
+  const [token, setToken] = useState(null);
 
   return (
     <>
-      < Authenticate />
-      < SignUpForm />
+      < Authenticate token={token} setToken={setToken} />
+      < SignUpForm token={token} setToken={setToken} />
     </>
   );
 }
